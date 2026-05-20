@@ -73,7 +73,7 @@ class MachineApp {
       if (['temperature'].includes(key)) {
         const numValue = parseFloat(value);
         this.settings.llm[key] = isNaN(numValue) ? value : numValue;
-      } else if (['max_completion_tokens'].includes(key)) {
+      } else if (['max_output_tokens'].includes(key)) {
         const numValue = parseInt(value, 10);
         this.settings.llm[key] = isNaN(numValue) ? value : numValue;
       } else if (['instructions_file'].includes(key)) {
